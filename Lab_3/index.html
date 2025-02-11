@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Tutorial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <style>
+    p { font-family: "Roboto Condensed", serif; color:white; }
+    .body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .sport {
+      display: flex;
+      justify-content: space-evenly;
+      background-color: black;
+      align-items: center;
+      border-radius: 3px;
+      position: sticky; 
+      top: 0; 
+      z-index: 1000;  
+      width: 100%; 
+      box-shadow: 0 4px 2px -2px gray;  
+    }
+
+    .title {
+      margin-left: 2px;
+      font-family: "Roboto Condensed", serif;
+      font-weight: bold;
+      font-size: 25px;
+      vertical-align: top;
+      margin-top: 14px;
+    }
+    p:hover {
+      font-size:1.2rem;
+      cursor:pointer;
+    }
+    .main {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      row-gap: 20px;
+      column-gap: 10px;
+      margin-top: 20px;
+    }
+    .bat {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* Ensures spacing between the image and price */
+      height: 350px; /* Adjusted for space to fit the image and price */
+      padding: 10px;
+    }
+
+    .bat .heading {
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+      padding: 10px;
+    }
+
+    .bat .image {
+      flex-grow: 1; /* Makes the image area grow to fill the space */
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .bat .image img {
+      width: 100%;
+      height: 250px;
+      background-size: cover;
+    }
+
+    .bat p {
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      color: black;
+      margin-top: auto; /* Pushes the price to the bottom of the container */
+    }
+
+    .bat:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 12px rgba(169, 169, 169, 0.5); 
+    }
+
+    .footer {
+      background: #000;
+      padding: 30px 0px;
+      font-family: 'Play', sans-serif;
+      text-align: center;
+      color: gray;
+      font-size: 0.8em;
+      width: 100%;
+      position: relative;
+    }
+    .footer .row {
+      width: 100%;
+      margin: 1% 0%;
+      padding: 0.6% 0%;
+      color: gray;
+    }
+    .footer .row a {
+      text-decoration: none;
+      color: gray;
+      transition: 0.5s;
+    }
+    .footer .row a:hover {
+      color: #fff;
+    }
+    .footer .row ul {
+      width: 100%;
+    }
+    .footer .row ul li {
+      display: inline-block;
+      margin: 0px 30px;
+    }
+    .footer .row a i {
+      font-size: 2em;
+      margin: 0% 1%;
+    }
+    @media (max-width: 720px) {
+      .footer {
+        text-align: left;
+        padding: 5%;
+      }
+      .footer .row ul li {
+        display: block;
+        margin: 10px 0px;
+        text-align: left;
+      }
+      .footer .row a i {
+        margin: 0% 3%;
+      }
+    }
+  </style>
+  <!--FONT AWESOME-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--GOOGLE FONTS-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+</head>
+<body class="body">
+  <navbar class="sport">
+    <p class="title">SportEquipments</p>
+    <p>About</p>
+    <p>Services</p>
+    <p>Typography</p>
+    <p>Gallery</p>
+    <p>Mail</p>
+  </navbar>
+  <div class="main"> 
+    <div class="bat">
+      <div class="heading">Bat</div>
+      <div class="image"><img src="bat.png" alt="Bat"></div>
+      <p style="color : black">$50</p>
+    </div>
+    <div class="bat">
+      <div class="heading">Football</div>
+      <div class="image"><img src="football.png" alt="Football"></div>
+      <p>$40</p>
+    </div>
+    <div class="bat">
+      <div class="heading">Hockey</div>
+      <div class="image"><img src="hockey.png" alt="Hockey"></div>
+      <p>$60</p>
+    </div>
+    <div class="bat">
+      <div class="heading">BasketBall</div>
+      <div class="image"><img src="Basketball.png" alt="BasketBall"></div>
+      <p>$20</p>
+    </div>
+    <div class="bat">
+      <div class="heading">CricketBall</div>
+      <div class="image"><img src="cricketball.png" alt="CricketBall"></div>
+      <p>$10</p>
+    </div>
+    <div class="bat">
+      <div class="heading">VolleyBall</div>
+      <div class="image"><img src="volleyball.png" alt="VolleyBall"></div>
+      <p>$15</p>
+    </div>
+    <div class="bat">
+      <div class="heading">Racket</div>
+      <div class="image"><img src="Racket.png" alt="Racket"></div>
+      <p>$30</p>
+    </div>
+    <div class="bat">
+      <div class="heading">Shuttle</div>
+      <div class="image"><img src="shuttle.png" alt="Shuttle"></div>
+      <p>$5</p>
+    </div>
+    <div class="bat">
+      <div class="heading">TableTennis</div>
+      <div class="image"><img src="tt.png" alt="TableTennis"></div>
+      <p>$50</p>
+    </div>
+    <div class="bat">
+      <div class="heading">Tennis</div>
+      <div class="image"><img src="tennis.png" alt="Tennis"></div>
+      <p>$60</p>
+    </div>
+    <div class="bat">
+      <div class="heading">Golf</div>
+      <div class="image"><img src="golf-stick.png" alt="Golf"></div>
+      <p>$70</p>
+    </div>
+    <div class="bat">
+      <div class="heading">Rugby</div>
+      <div class="image"><img src="rugby.jpg" alt="Rugby"></div>
+      <p>$10</p>
+    </div>
+  </div>
+</body>
+</html>
